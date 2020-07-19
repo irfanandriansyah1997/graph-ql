@@ -1,0 +1,15 @@
+{
+  "name": "graph-ql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/irfanandriansyah1997/graph-ql.git",
+  "author": "Irfan Andriansyah <irfanandriansyah10@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0",
+    "lodash": "^4.17.19"
+  }
+}
