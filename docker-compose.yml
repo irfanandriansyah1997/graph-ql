@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+    apps:
+        container_name: apps
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+        volumes:
+            - ./:/usr/src/99-frontend
+        command: yarn run app
+        ports:
+            - "3000:3000"
+        networks:
+            - graph
+
+volumes:
+    database:
+
+networks:
+    graph:
+        driver: bridge
