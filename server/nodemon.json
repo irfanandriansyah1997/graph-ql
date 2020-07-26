@@ -4,5 +4,5 @@
     "env": {
         "NODE_ENV": "production"
     },
-    "exec": "node src/app.js"
+    "exec": "node app.js"
 }

@@ -6,7 +6,7 @@ services:
             context: ./
             dockerfile: ./Dockerfile
         volumes:
-            - ./:/usr/src/99-frontend
+            - ./server:/usr/src/99-frontend
         command: yarn run app
         ports:
             - "3000:3000"
