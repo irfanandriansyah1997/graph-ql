@@ -1,13 +1,25 @@
 version: '3.7'
 services:
-    apps:
-        container_name: apps
+    server:
+        container_name: client-graph-ql
         build:
             context: ./
             dockerfile: ./Dockerfile
         volumes:
             - ./server:/usr/src/99-frontend
         command: yarn run app
+        ports:
+            - "4000:4000"
+        networks:
+            - graph
+    client:
+        container_name: server-graph-ql
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+        volumes:
+            - ./client:/usr/src/99-frontend
+        command: yarn start
         ports:
             - "3000:3000"
         networks:
