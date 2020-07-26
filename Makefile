@@ -20,3 +20,6 @@ start-dev:
 	@echo "Wait for 10 seconds for database and es up and running properly"
 	@sleep 10
 	@$(DOCKER_COMPOSE) up
+
+stop-dev:
+	@$(DOCKER_COMPOSE) down
